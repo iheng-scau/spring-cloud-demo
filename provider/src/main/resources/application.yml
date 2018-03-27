@@ -1,11 +1,15 @@
 server:
   port: 8001
 eureka:
+  provider: true
   instance:
     prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+feign:
+  client:
+    accept: aplication/x-hessain
 spring:
   application:
     name: provider
